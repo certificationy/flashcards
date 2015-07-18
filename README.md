@@ -71,3 +71,10 @@ $card = $trainingSession->pop();
 $trainingSession->update(FlashCard::GOOD_KNOWLEDGE); // the level of selected flashcard was decreased of 1
 ```
 You can see a training like a randomised list of weighted items, the more you need to learn a card, the more it appears.
+
+## ROADMAP for 1.0
+
+* Add adaptor to use the packs from certificationy
+* Provide a minimalist database implementation system
+* Create a "ready to use" web application to learn
+* Create a console application or update ``certificationy-cli`` (to be discussed)
