@@ -77,7 +77,7 @@ class TrainingSession
     public function update($levelOfKnowledge)
     {
         $position = $this->selectedPosition;
-        $this->flashcards[$position]->setLevel($levelOfKnowledge);
+        $this->flashcards[$position]->updateLevel($levelOfKnowledge);
 
         return $this;
     }

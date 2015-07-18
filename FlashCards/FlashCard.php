@@ -18,9 +18,9 @@ namespace Certificationy\FlashCards;
  */
 class FlashCard
 {
-    const POOR_KNOWLEDGE = -1;
+    const POOR_KNOWLEDGE = +1;
     const NORMAL_KNOWLEDGE = 0;
-    const GOOD_KNOWLEDGE = 1;
+    const GOOD_KNOWLEDGE = -1;
     const MIN_KNOWLEDGE = 1;
     const MAX_KNOWLEDGE = 10;
 
@@ -76,7 +76,7 @@ class FlashCard
     /**
      * @param int $knowledge
      */
-    public function updateKnowledge($knowledge)
+    public function updateLevel($knowledge)
     {
         $newLevel = $this->level + $knowledge;
         if ($newLevel >= self::MIN_KNOWLEDGE && $newLevel <= self::MAX_KNOWLEDGE){

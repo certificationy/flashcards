@@ -38,9 +38,11 @@ class TrainingSessionTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($flashCard instanceof FlashCard);
         $this->assertSame($flashCard, $trainingSession->getSelectedFlashCard());
 
-        $trainingSession->update(3);
+        $oldLevel = $trainingSession->getSelectedFlashCard()->getLevel();
 
-        $this->assertEquals(3, $trainingSession->getSelectedFlashCard()->getLevel());
+        $trainingSession->update(FlashCard::GOOD_KNOWLEDGE);
+
+        $this->assertEquals($oldLevel - 1, $trainingSession->getSelectedFlashCard()->getLevel());
     }
 
     public function testPop()
