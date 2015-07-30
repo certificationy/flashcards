@@ -47,8 +47,8 @@ $card->updateLevel(\Certificationy\FlashCard::GOOD_KNOWLEDGE);
 ```
 
 What is happening here ? This library accept 10 levels of knowledge for a question:
-* 1 you don't know at all the answer, you need to repeat this FlashCard;
-* 10 you know perfectly the answer, you don't need to see again this FlashCard;
+* 10 you don't know at all the answer, you need to repeat this FlashCard;
+* 1 you know perfectly the answer, you don't need to see again this FlashCard;
 
 Obviously, during a training session your knowledge of answers will change and by the way the level associated to the FlashCards
 have to be updated.
